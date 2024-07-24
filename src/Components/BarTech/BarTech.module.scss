@@ -1,0 +1,46 @@
+@import '../../assets//main.scss';
+
+.barTech {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family: $main-font;
+    font-size: 24px;
+
+    &__boxSkills:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__title {
+        @include title();
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    &__icon {
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;        
+    }
+
+    &__item {
+        @include text();
+        margin-bottom: 5px;
+    }
+
+    &__item {
+        @include text();
+        margin-bottom: 5px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+}

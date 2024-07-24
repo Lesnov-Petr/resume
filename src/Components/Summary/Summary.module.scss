@@ -1,0 +1,16 @@
+@import '../../assets/main.scss';
+
+.summary {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        margin: 0;
+        @include title()
+    }
+
+    &__about {
+        @include text();
+        margin: 0;
+    }
+}

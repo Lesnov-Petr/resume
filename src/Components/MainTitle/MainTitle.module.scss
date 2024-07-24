@@ -1,0 +1,22 @@
+@import '../../assets/main.scss';
+
+.mainTitle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+
+    &__name {
+        @include title();
+        margin: 0;
+        font-size: 50px;
+        line-height: 2;
+    }
+
+    &__profession {
+        @include title();
+        margin: 0;
+        font-size: 30px;
+        line-height: 2;
+    }
+}
