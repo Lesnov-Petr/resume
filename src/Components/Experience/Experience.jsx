@@ -5,10 +5,22 @@ export default function Experience() {
   return (
     <div className={styles.experience}>
       <h3 className={styles.experience__title}>
-        Менеджер ВЭД (Внешняя экономическая Деятельность)
+        Менеджер ВЭД (Внешняя Экономическая Деятельность)
       </h3>
-      <h4 className={styles.experience__title}>05.2018 - НАСТОЯЩЕЕ ВРЕМЯ</h4>
-      <h5 className={styles.experience__title}>Обязанности</h5>
+      <h5
+        className={
+          styles.experience__title + " " + styles.experience__titleName
+        }
+      >
+        05.2018 - Настоящее время
+      </h5>
+      <h5
+        className={
+          styles.experience__title + " " + styles.experience__titleName
+        }
+      >
+        Обязанности :
+      </h5>
       <ul className={styles.experience__list}>
         <li className={styles.experience__item}>
           <img className={styles.experience__icon} src={IconCode} alt="code" />
@@ -27,7 +39,13 @@ export default function Experience() {
           Разработка и внедрение новых продуктов
         </li>
       </ul>
-      <h5 className={styles.experience__title}>Достижения</h5>
+      <h5
+        className={
+          styles.experience__title + " " + styles.experience__titleName
+        }
+      >
+        Достижения :
+      </h5>
       <ul className={styles.experience__list}>
         <li className={styles.experience__item}>
           <img className={styles.experience__icon} src={IconCode} alt="code" />

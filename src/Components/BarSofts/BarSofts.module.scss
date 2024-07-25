@@ -3,9 +3,10 @@
 .barSoft {
     display: flex;
     flex-direction: column;
+    padding: 10px 0 10px 0;
 
     &__title {
-        @include title();
+        @include title($mainColor);
         margin: 0;
         margin-bottom: 10px;
         
@@ -18,12 +19,12 @@
     }
 
     &__item {
-        @include text();
+        @include text($mainColor);
         margin-bottom: 5px;
     }
 
     &__item {
-        @include text();
+        @include text($mainColor);
         margin-bottom: 5px;
     }
 

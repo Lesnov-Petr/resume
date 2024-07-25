@@ -7,7 +7,7 @@
 }
 
 .boxBar {
-    background-color: #e0f6ff;
+    background-color:#edede9; 
     padding: 20px;  
     border-radius: 10px 0 0 10px;
     border-right: 1px solid gray;
@@ -16,8 +16,8 @@
 .boxAbout {
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 30px;
+    padding: 30px;
     width: 100%;
     border-radius: 0 10px 10px 0;
-    background-color: #F0FFFF;
+    background-color: #f5ebe0;
 }
