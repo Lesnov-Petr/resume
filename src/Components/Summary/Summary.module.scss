@@ -3,12 +3,12 @@
 .summary {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     &__title {
         display: inline-flex;
         @include title($textColor);
-        margin-bottom: 20px;
+        margin-bottom: 10px;
 
         &__span {
             position: relative;
