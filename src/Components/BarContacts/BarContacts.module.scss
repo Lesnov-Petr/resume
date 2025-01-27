@@ -1,10 +1,10 @@
 @import '../../assets//main.scss';
 
 .barContacts {
-    padding: 10px;
+    display: flex;
+    align-items: center;
     font-family: $main-font;
     font-size: 20px;
-    border-bottom: 1px solid gray;
 
     &__title {
         margin: 0;
@@ -12,14 +12,11 @@
     }
 
     &__list {
-        @include text();
-        list-style: none;
         margin: 0;
         padding: 0;
     }
 
     &__item {
-        @include text();
         display: flex;
         margin-bottom: 10px;
     }
@@ -30,12 +27,13 @@
 }
 
 .barContacts__link {
+    @include text($textColor);
     display: inherit;
     margin: 0;
     margin-left: 5px;
     color: black;
     text-decoration: none;
-    align-items: center;
+    font-size: 18px;
 
 }
 

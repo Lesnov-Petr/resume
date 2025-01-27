@@ -6,7 +6,7 @@
 
     &__title {
         margin: 0;
-        @include title()
+        @include title($textColor)
     }
 
     &__list {
@@ -16,7 +16,7 @@
     }
 
     &__item {
-        @include text();
+        @include text($textColor);
     }
 
     &__icon {

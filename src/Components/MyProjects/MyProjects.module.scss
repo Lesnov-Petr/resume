@@ -5,8 +5,23 @@
     flex-direction: column;
 
     &__title {
-        @include title();
-        margin: 0;        
+        @include title($textColor);
+        margin-bottom: 20px;
+
+        &__span {
+            position: relative;
+            padding-bottom: 10px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 4px;
+                background-color: $textColor;
+            }
+        }
     }
 
     &__list {
@@ -15,8 +30,84 @@
         padding: 0;
     }
 
+    &__item {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
     &__icon {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+
+    &__itemName {
+        margin: 0;
+        @include title($textColor);
+        font-size: 15px;
+       
+    }
+
+    &__link {
+        @include title($textColor);
+        text-decoration: none;
+        &:hover {
+            color: orangered;
+        }
+    }
+
+    &__iconLink {
+        width: 14px;
+        height: 14px;
+        fill: currentColor;
+        margin-left: 5px;
+    }
+}
+
+.boxAbout {
+    margin-top: 5px;
+    &__title {
+        @include title($textColor);
+        margin: 0;
+    }
+
+    &__listAbout {
+            list-style: none;
+            padding: 0;
+        }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        @include text($textColor);
+        margin: 0;
+        font-size: 13px;
+    }
+
+    &__iconCode {
+        width: 9px;
+        height: 9px;
+        margin-right: 5px;
+    }
+}
+
+.boxSteck {
+    display: flex;
+
+    &__title {
+        margin: 0;
+    }
+
+    &__span {
+        color: orangered;
+        padding: 0 3px 0 3px
+    }
+
+    &__text {
+        @include text($textColor);
+        margin: 0;
     }
 }

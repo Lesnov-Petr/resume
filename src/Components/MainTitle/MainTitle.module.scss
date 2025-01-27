@@ -3,20 +3,29 @@
 .mainTitle {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 200px;
+    margin-bottom: 45px;
+
+    &__boxProfession {
+        display: flex;
+        height: 100%;
+    }
 
     &__name {
-        @include title();
+        @include title($textColor);
         margin: 0;
-        font-size: 50px;
-        line-height: 2;
+        font-size: 30px;
+        margin-bottom: 12px;
     }
 
     &__profession {
-        @include title();
+        @include title($textColor);
         margin: 0;
-        font-size: 30px;
-        line-height: 2;
+        font-size: 20px;
+    }
+
+    &__iconJS {
+        display: flex;
+        width: 20px;
+        height: 20px;
     }
 }

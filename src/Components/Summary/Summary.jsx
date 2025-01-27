@@ -3,7 +3,9 @@ import styles from "./Summary.module.scss";
 export default function Summary() {
   return (
     <div className={styles.summary}>
-      <h3 className={styles.summary__title}>О себе</h3>
+      <h3 className={styles.summary__title}>
+        <span className={styles.summary__title__span}>О себе</span>
+      </h3>
       <p className={styles.summary__about}>
         Разработчик в сфере web development. Ваши требования, соответствуют моим
         навыкам. Имею опыт разработки системы для закупок продукции (от

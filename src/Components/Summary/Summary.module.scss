@@ -3,14 +3,33 @@
 .summary {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 
     &__title {
-        margin: 0;
-        @include title()
+        display: inline-flex;
+        @include title($textColor);
+        margin-bottom: 20px;
+
+        &__span {
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        &__span::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $textColor;
+        }
     }
 
     &__about {
-        @include text();
+        @include text($textColor);
         margin: 0;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
