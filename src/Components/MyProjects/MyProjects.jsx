@@ -1,175 +1,70 @@
 import styles from "./MyProjects.module.scss";
 import { ReactComponent as IconProject } from "../../assets/image/iconPoject.svg";
+import { ReactComponent as IconCode } from "../../assets/image/iconCode.svg";
+import { ReactComponent as IconLink } from "../../assets/image/iconLink.svg";
+import dbProjects from "./dbProjects.json";
 
 export default function MyProjects() {
   return (
     <div className={styles.projects}>
-      <h3 className={styles.projects__title}>Проекты (завершенные):</h3>
+      <h3 className={styles.projects__title}>
+        <span className={styles.projects__title__span}>Проекты:</span>
+      </h3>
       <ul className={styles.projects__list}>
-        <li className={styles.projects__item}>
-          <a
-            className={styles.projects__link}
-            href="https://slimmom5group.netlify.app/"
-            alt="slim mom"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconProject
-              className={styles.projects__icon}
-              src={IconProject}
-              alt="iconProject"
-            />
-            <p className={styles.projects__linkName}>
-              Slim Mom (Ешь и будь в форме)
-            </p>
-          </a>
-          <h4
-            className={
-              styles.projects__title + " " + styles.projects__titleItem
-            }
-          >
-            Стек :
-          </h4>
-          <p
-            className={
-              styles.projects__description + " " + styles.projects__tech
-            }
-          >
-            [ React, Redux, Nodejs, Express.js, MongoDB ]
-          </p>
-          <h4
-            className={
-              styles.projects__title + " " + styles.projects__titleItem
-            }
-          >
-            Задача :
-          </h4>
-          <p className={styles.projects__description}>
-            Создать архитектурe проекта (front-end, back-end) с нуля, на
-            основании макета в графическом редакторе Figma
-          </p>
-          <h4
-            className={
-              styles.projects__title + " " + styles.projects__titleItem
-            }
-          >
-            Достижения :
-          </h4>
-          <p className={styles.projects__description}>
-            Создал Back-end на платформе{" "}
-            <span className={styles.projects__tech}>Node.js</span> и библиотеки
-            <span className={styles.projects__tech}> Express.js</span>.
-            Front-end реализовал на основе библиотеки
-            <span className={styles.projects__tech}> React.js</span> и стейт
-            менеджера <span className={styles.projects__tech}>Redux.js</span>.
-            <span className={styles.projects__tech}> MongoDB</span> выступила
-            системой управления базами данных.
-          </p>
-        </li>
-        <li className={styles.projects__item}>
-          <a
-            className={styles.projects__link}
-            href="https://lesnov-petr.github.io/project-Ice-Cream/"
-            alt="IceCream"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconProject
-              className={styles.projects__icon}
-              src={IconProject}
-              alt="iconProject"
-            />
-            <p className={styles.projects__linkName}>Ice-Cream (мороженное)</p>
-          </a>
-          <h4
-            className={
-              styles.projects__title + " " + styles.projects__titleItem
-            }
-          >
-            Стек :
-          </h4>
-          <p
-            className={
-              styles.projects__description + " " + styles.projects__tech
-            }
-          >
-            [ HTML5, CSS3, SASS ]
-          </p>
-          <h4
-            className={
-              styles.projects__title + " " + styles.projects__titleItem
-            }
-          >
-            Задача :
-          </h4>
-          <p className={styles.projects__description}>
-            Верстка визитки на основании графического редактора
-            <span className={styles.projects__tech}> Figma</span>
-          </p>
-          <h4
-            className={
-              styles.projects__title + " " + styles.projects__titleItem
-            }
-          >
-            Достижения :
-          </h4>
-          <p className={styles.projects__description}>
-            Задача была выполнина в кратчайшие сроки и передана заказчику.
-          </p>
-        </li>
-        <li className={styles.projects__item}>
-          <a
-            className={styles.projects__link}
-            href="https://lesnov-petr.github.io/WebStudio/"
-            alt="WebStudio"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <IconProject
-              className={styles.projects__icon}
-              src={IconProject}
-              alt="iconProject"
-            />
-            <p className={styles.projects__linkName}>
-              Web Studio (визитная карточка)
-            </p>
-          </a>
-          <h4
-            className={
-              styles.projects__title + " " + styles.projects__titleItem
-            }
-          >
-            Стек :
-          </h4>
-          <p
-            className={
-              styles.projects__description + " " + styles.projects__tech
-            }
-          >
-            [ HTML5, CSS3, SASS ]
-          </p>
-          <h4
-            className={
-              styles.projects__title + " " + styles.projects__titleItem
-            }
-          >
-            Задача :
-          </h4>
-          <p className={styles.projects__description}>
-            Верстка сайта (визитка) для WebStudio. Важное внимание уделить
-            верстке.
-          </p>
-          <h4
-            className={
-              styles.projects__title + " " + styles.projects__titleItem
-            }
-          >
-            Достижения :
-          </h4>
-          <p className={styles.projects__description}>
-            Задача была выполнина в кратчайшие сроки и передана заказчику.
-          </p>
-        </li>
+        {dbProjects.map((project) => {
+          return (
+            <li className={styles.projects__item}>
+              <IconProject className={styles.projects__icon} />
+              <div className={styles.projects__about}>
+                <div className={styles.projects__box}>
+                  <a
+                    className={styles.projects__link}
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span>{project.name} </span>
+                    <IconLink className={styles.projects__iconLink} />
+                  </a>
+                </div>
+                <div className={styles.boxSteck}>
+                  <h4 className={styles.boxSteck__title}>Стек :</h4>
+                  <p className={styles.boxSteck__text}>
+                    <span className={styles.boxSteck__span}>[</span>
+                    {project.steck}
+                    <span className={styles.boxSteck__span}>]</span>
+                  </p>
+                </div>
+                <div className={styles.boxAbout}>
+                  <h4 className={styles.boxAbout__title}>Задачи</h4>
+                  <ul className={styles.boxAbout__listAbout}>
+                    {project.tascks.map((tasck) => {
+                      return (
+                        <li className={styles.boxAbout__item}>
+                          <IconCode className={styles.boxAbout__iconCode} />
+                          <p className={styles.boxAbout__text}>{tasck}</p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+                <div className={styles.boxAbout}>
+                  <h4 className={styles.boxAbout__title}>Достижения</h4>
+                  <ul className={styles.boxAbout__listAbout}>
+                    {project.progress.map((item) => {
+                      return (
+                        <li className={styles.boxAbout__item}>
+                          <IconCode className={styles.boxAbout__iconCode} />
+                          <p className={styles.boxAbout__text}>{item}</p>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              </div>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

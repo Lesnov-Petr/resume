@@ -1,81 +1,38 @@
 import styles from "./BarTech.module.scss";
-import IconCode from "../../assets/image/iconCode.svg";
+import { ReactComponent as IconCode } from "../../assets/image/iconCode.svg";
 
 export default function BarSkills() {
+  const techSkills = [
+    [
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "Redux.js",
+      "HTML5",
+      "CSS3",
+      "SASS",
+      "GIT",
+    ],
+    ["Node.js", "Express.js", "Nestjs", "Sequelize", "PostgreSQL", "MongoDB"],
+  ];
   return (
     <div className={styles.barTech}>
-      <h3 className={styles.barTech__title}>Навыки</h3>
+      <h3 className={styles.barTech__title}>НАВЫКИ</h3>
       <ul className={styles.barTech__list}>
-        <div className={styles.barTech__boxSkills}>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            JavaScript
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            TypeScript
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            React.js
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            Redux.js
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            Redux Toolkit
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            SSR
-          </li>
-        </div>
-        <div className={styles.barTech__boxSkills}>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            Node.js
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            Express.js
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            NoSQL
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            MySQL
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            PostgreSQL
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            MongoDB
-          </li>
-        </div>
-        <div className={styles.barTech__boxSkills}>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            HTML5
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            CSS3
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            SASS
-          </li>
-          <li className={styles.barTech__item}>
-            <img className={styles.barTech__icon} src={IconCode} alt="code" />
-            GIT
-          </li>
-        </div>
+        {techSkills.map((list) => {
+          return (
+            <div className={styles.barTech__boxSkills}>
+              {list.map((skill) => {
+                return (
+                  <li className={styles.barTech__item}>
+                    <IconCode className={styles.barTech__icon} />
+                    {skill}
+                  </li>
+                );
+              })}
+            </div>
+          );
+        })}
       </ul>
     </div>
   );

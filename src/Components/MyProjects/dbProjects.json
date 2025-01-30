@@ -1,0 +1,46 @@
+[
+    {
+        "id":"1",
+        "name":"FitBook (Ешь и будь в форме)",
+        "link":"https://slimmom5group.netlify.app/",
+        "steck":"React, Redux, Nodejs, Express.js, MongoDB, HTML, CSS, SASS",
+        "tascks":[
+            "Реализовать проект FitBook, на основании макета в графическом редакторе Figma.", 
+            "Адаптивность для трех эндпоинтов (1280px; 768px; 320px)",
+            "FrontEnd на основе библиотеки Reactjs",
+            "Backend на платформе Nodejs"
+        ],
+        "progress":[
+            "Проект был выполнен за 80 часов",
+            "Frontend реализовал на основе библиотеки React.js и стейт менеджера Redux.js.",
+            "Backend создал на платформе Node.js и библиотеки Express.js.",
+            "MongoDB выступила системой управления базами данных."
+        ]
+    },
+    {
+        "id":"2",
+        "name":"Web Studio (визитка)",
+        "link":"https://lesnov-petr.github.io/WebStudio/",
+        "steck":"HTML, CSS, SASS",
+        "tascks":[
+            "Верстка сайта (визитка) для WebStudio по макету Figma", 
+            "Адаптивность для трех эндпоинтов (1200px; 768px;480px)"
+        ],
+        "progress":[
+            "Задача была выполнина в полном объеме за 10 часов и передана заказчику."
+        ]
+    },
+    {
+        "id":"3",
+        "name":"Ice Cream (мороженное)",
+        "link":"https://lesnov-petr.github.io/project-Ice-Cream/",
+        "steck":"HTML, CSS, SASS",
+        "tascks":[
+            "Адаптивность для трех эндпоинтов (1200px; 768px;480px)",
+            "Серстать сайт по макету Figma"
+        ],
+        "progress":["Заказ выполнен за 8 часов и передан заказчику."
+        ]
+    }
+    
+]

@@ -1,6 +1,14 @@
-@import './utils//mixin';
+@import "./utils//mixin";
 $title-font: "Josefin Sans", sans-serif;
-$main-font: "Roboto", sans-serif;
+$main-font: "Inter", sans-serif;
 
-$mainColor: #0b0b64;
-$accentColor: #0c7578;
+// Color
+$textColor: #5c6168;
+$fonColor: #edede9;
+$fonColorRight: #f8f3f3;
+$accentColor: #ff4500;
+$accentGreen: #065153;
+
+// effects
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
+$ms: 250ms;

@@ -1,50 +1,71 @@
-@import '../../assets//main.scss';
+@import "../../assets//main.scss";
 
 .barContacts {
-    padding: 10px;
-    font-family: $main-font;
-    font-size: 20px;
-    border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  font-family: $main-font;
+  font-size: 20px;
 
-    &__title {
-        margin: 0;
-        margin-bottom: 10px;
-    }
+  &__title {
+    @include title($accentGreen);
+    margin: 0;
+    margin-bottom: 10px;
+  }
 
-    &__list {
-        @include text($mainColor);
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
 
-    &__item {
-        @include text($mainColor);
-        display: flex;
-        margin-bottom: 10px;
-        font-weight: 500;
-    }
+  &__item {
+    display: flex;
+    margin-bottom: 10px;
+  }
 
-    &__item:last-child {
-        margin-bottom: 0;
-    }
+  &__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .barContacts__link {
-    display: inherit;
-    margin: 0;
-    margin-left: 5px;
-    color: black;
-    text-decoration: none;
-    align-items: center;
-
+  @include text($textColor);
+  display: inherit;
+  margin: 0;
+  margin-left: 5px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .barContacts__icon {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
-.barContacts__link:hover {
-    color: $accentColor;
+.mainTitle {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+
+  &__boxProfession {
+    display: flex;
+  }
+
+  &__name {
+    @include title($accentGreen);
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  &__profession {
+    @include title($accentGreen);
+    margin: 0;
+    font-size: 20px;
+  }
+
+  &__iconJS {
+    width: 20px;
+    height: 20px;
+  }
 }
