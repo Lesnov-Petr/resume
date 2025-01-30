@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/resume/static/css/main.ef6536a1.css",
+    "main.js": "/resume/static/js/main.5684a2cf.js",
+    "static/media/myFoto.jpg": "/resume/static/media/myFoto.f928ca4154468355f79c.jpg",
+    "static/media/iconPhone.svg": "/resume/static/media/iconPhone.4bf686fabf20ecf38be84c1812c47a4f.svg",
+    "static/media/iconPoject.svg": "/resume/static/media/iconPoject.db23c3ddfd7a6b8e780e7f2062e0024e.svg",
+    "static/media/iconLink.svg": "/resume/static/media/iconLink.40ae67d26fbfb4c9f3a0ddf939ca3c0d.svg",
+    "static/media/iconGit.svg": "/resume/static/media/iconGit.5531be85d7a8d6f333e5c7136944a022.svg",
+    "static/media/iconCode.svg": "/resume/static/media/iconCode.e0c06784f577ed43ea3cdaabe8544868.svg",
+    "static/media/iconTelegram.svg": "/resume/static/media/iconTelegram.510cdc105cc0ef879d51a740dea54bb7.svg",
+    "index.html": "/resume/index.html",
+    "static/media/iconJS.svg": "/resume/static/media/iconJS.19600440c8c62e3de974e2bba991871f.svg",
+    "static/media/iconLocation.svg": "/resume/static/media/iconLocation.b2ad9feda9f377fd3651a708fa1af15e.svg",
+    "static/media/iconMail.svg": "/resume/static/media/iconMail.10015391e0af1426d55622bd508f85c5.svg",
+    "main.ef6536a1.css.map": "/resume/static/css/main.ef6536a1.css.map",
+    "main.5684a2cf.js.map": "/resume/static/js/main.5684a2cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef6536a1.css",
+    "static/js/main.5684a2cf.js"
+  ]
+}
